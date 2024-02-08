@@ -5,15 +5,17 @@ public interface ISubMenu
     string Label { get; }
 
     Func<string> Result { get;  }
+    // Action? Result { get;  }
 }
 
-public interface IReport<T>
+public class Report<T>
 {
     public string Label { get;  }
 
     public List<T> Items { get; }
 
     public List<ISubMenu> SubMenus { get;  }
+    public Report(){}
 }
 
 public class SubMenu : ISubMenu
