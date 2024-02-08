@@ -1,18 +1,15 @@
-﻿namespace Report;
+﻿namespace ReportManager;
 
 public interface ISubMenu
 {
     string Label { get; }
 
     Func<string> Result { get;  }
-    // Action? Result { get;  }
 }
 
-public class Report<T>
+public class Report
 {
     public string Label { get;  }
-
-    public List<T> Items { get; }
 
     public List<ISubMenu> SubMenus { get;  }
     public Report(){}
